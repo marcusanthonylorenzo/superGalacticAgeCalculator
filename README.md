@@ -47,24 +47,24 @@ This app is essentially an age converter, as we all know that your age is differ
 
 Create: A calculator that converts earth years (and hence your age) to equivalent years on different planets.
 These planets are:
-[ ] Mercury (.24 Earth years)
-[ ] Venus (.62 Earth years)
-[ ] Mars (1.88 Earth years)
-[ ] Jupiter (11.86 years)
+-[ ] Mercury (.24 Earth years)
+-[ ] Venus (.62 Earth years)
+-[ ] Mars (1.88 Earth years)
+-[ ] Jupiter (11.86 years)
 
 It determines how many years left a user has to live on each planet.
 - const lifeExpectancy. (create an object literal with methods which calculate activityLevel, diet, continent?)
-  [ ] Test 1: with a value of 100
-  [ ] Test 2: referencing lifeExpectancy obj as stated in paranthesis above.
+  - [ ] Test 1: with a value of 100
+  - [ ] Test 2: referencing lifeExpectancy obj as stated in paranthesis above.
 
-[ ] return remainder of years left to live,
-[ ] if user.age > lifeExpectancy.age return "Congrats, you've managed to prolong the inevitable. Death is Tom and you are Jerry."
+-[ ] return remainder of years left to live,
+-[ ] if user.age > lifeExpectancy.age return "Congrats, you've managed to prolong the inevitable. Death is Tom and you are Jerry."
 
 
 
 #### Objects, Properties:
 - Planet class
-  constructor(name, earthYearsRatio, userAge){
+  constructor(name, earthYearsRatio){
   - this.name = name;
   - this.earthYearsRatio;
   - convertAge(userAge){

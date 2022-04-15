@@ -2,7 +2,7 @@
   "name": "superGalacticAgeCalculator",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./../src/main.js",
   "scripts": {
     "build": "webpack",
     "start": "npm run build && webpack-dev-server --open --mode development",
