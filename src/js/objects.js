@@ -1,4 +1,3 @@
-
 export class Planet {
   constructor(name, earthYearsRatio){
     this.name = name;
@@ -26,7 +25,6 @@ export class User {
   }
 }
 
-//create more universal functions with parameters than are dynamic.
 const getAgeOnPlanet = function(user, planet){
   let age = user.age;
   let newAge = planet.convertAge(age);
@@ -44,5 +42,10 @@ export const relativeAges = function (user, planet){
   //official age remaining on earth, then on another planet.
   const lifeLeftEarth = user.lifeExpectancy(send);
   const lifeLeftBeyond = planet.convertAge(lifeLeftEarth);
-  console.log(lifeLeftEarth, `years of life remaining on Earth, and `, lifeLeftBeyond, `years of life remaining on the planet ${planet.name}.`);
+
+  if (user.age > (user.age + lifeLeftEarth) || send > lifeLeftBeyond) {
+    console.log(`${user.name} has lived `, Math.abs(lifeLeftEarth), `years longer than the life expectancy of `, (user.age + lifeLeftEarth),`. Congrats, you've managed to prolong the inevitable. Death is Tom and you are Jerry.`);
+  } else {
+    console.log(lifeLeftEarth, `years of life remaining on Earth, and `, lifeLeftBeyond, `years of life remaining on the planet ${planet.name}.`);
+  }
 };

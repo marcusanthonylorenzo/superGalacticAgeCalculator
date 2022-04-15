@@ -29,12 +29,15 @@ This app is essentially an age converter, as we all know that your age is differ
 ---
 
 ### Setup/Installation:
+#### `**Please make sure` that once you've received this repo on your computer, to `install your node_modules` and to `run build` via npm or yarn, or any related package manager.
+
+
 |   via CLI   |  via Download  |
 |---|---|
 | Download install Git Bash (Windows), use the terminal in your text editor, or open Terminal(Mac) | Simply download the ZIP via the green "Code" button to right of the "Add file" button at the main repo page. 
- Open Git Bash or Terminal and type: **cd ~/desktop** | Go to your zip file and extract to desired location on computer. 
+ Open Git Bash or Terminal and type: `cd ~/desktop` | Go to your zip file and extract to desired location on computer. 
  This will bring you to your desktop location on the command line, to receive files. | Go to specified extraction folder, and open index.html in your broswer. 
- Next, type: **git clone https://github.com/marcusanthonylorenzo/ ** | 
+ Next, type: `git clone https://github.com/marcusanthonylorenzo/superGalacticAgeCalculator` | 
  Once completed, go to your desktop and find the folder with same name as the repository. | **Note**: downloading not cloning will not allow you to push any changes to the repo. 
  Open index.html in your browser. |
 
@@ -53,12 +56,12 @@ These planets are:
 - [x] Jupiter (11.86 years)
 
 It determines how many years left a user has to live on each planet.
-- const lifeExpectancy. (create an object literal with methods which calculate activityLevel, diet, continent?)
-  - [ ] Test 1: with a value of 100
-  - [ ] Test 2: referencing lifeExpectancy obj as stated in paranthesis above.
+-  lifeExpectancy. ~~(create an object literal with methods which calculate activityLevel, diet, continent?)~~
+  - [x] Test 1: with a value of 50
+  - [ ] ~~Test 2: referencing lifeExpectancy obj as stated in paranthesis above.~~
 
--[ ] return remainder of years left to live,
--[ ] if user.age > lifeExpectancy.age return "Congrats, you've managed to prolong the inevitable. Death is Tom and you are Jerry."
+-[x] return remainder of years left to live,
+-[x] if user.age > lifeExpectancy.age return "Congrats, you've managed to prolong the inevitable. Death is Tom and you are Jerry."
 
 
 
@@ -92,6 +95,7 @@ It determines how many years left a user has to live on each planet.
     //`returns a value in earthYears based on activityLevel and Diet.`
     const lifeAvg = (this.activityLevel * this.diet)/2
     planet.earthYearsRatio * lifeAvg }
+- 
 
 After setting individual objects and methods, I will create instances and have their return values work in concert with User input and browser output.
 

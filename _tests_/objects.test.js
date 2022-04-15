@@ -1,9 +1,7 @@
 import { Planet, User } from "./../src/js/objects.js";
 
-
 //Planet class Tests.
 describe(`Planet`, () => {
-  
   test(`It should create a new Planet object.`, () => {
     const earth = new Planet("Earth", 1);
     console.log(earth);
@@ -21,12 +19,9 @@ describe(`Planet`, () => {
     expect(mercury.name).toEqual("Mercury");
     expect(mercury.earthYearsRatio).toEqual(.24);
   });
-
-
 });
 
 describe(`Planet.convertAge()`, () => {
-
   test(`It should create Planet.convertAge method: method should take int arguement and perform basic multiplication.`, () => {
     const mercury = new Planet("Mercury", .24);
 
@@ -65,13 +60,11 @@ describe(`Planet.convertAge()`, () => {
     expect(grace.lifeExpectancy()).toEqual(19);
     expect(ageOnMercury).toEqual(4.56);
   });
-
 });
 
 
 //User class Tests.
 describe(`User`, () => {
-  
   test(`It should create a new User object.`, () => {
     const newUser = new User("Marcus", 34);
 
@@ -86,11 +79,9 @@ describe(`User`, () => {
     expect(marcus.age).toEqual(34);
     expect(grace.age).toEqual(31);
   });
-
 });
 
 describe(`User.lifeExpectancy`, () => {
-
   test(`It should take the average of User.activityLevel and User.diet, subtract the user age to return an int value`, () => {
     const marcus = new User("Marcus", 34);
 
@@ -109,11 +100,9 @@ describe(`User.lifeExpectancy`, () => {
     expect(marcus.activityLevel).toEqual(70);
     expect(marcus.diet).toEqual(40);
   });  
-
 });
 
 describe(`getAgeOnPlanet`, () => {
-
   test(`Its should get ANY users age and convert ANY planets relative age simply by passing through the named objects, and using that objects own method.`, () => {
     const jupiter = new Planet("Jupiter", 11.86);
     const grace = new User("Grace", 31);
@@ -125,6 +114,5 @@ describe(`getAgeOnPlanet`, () => {
     };
     
     expect(Math.round(getAgeOnPlanet(grace, jupiter))).toEqual(368);
-
   });
 });
