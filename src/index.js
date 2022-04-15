@@ -12,3 +12,7 @@ const marcus = new User("Marcus", 34);
 const grace = new User("Grace", 31);
 const heirani = new User("Heirani", 19);
 
+console.log(earth, mercury, venus, mars, jupiter, grace, heirani, marcus);
+
+console.log(marcus.lifeExpectancy());
+

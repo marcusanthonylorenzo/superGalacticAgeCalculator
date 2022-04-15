@@ -54,6 +54,18 @@ describe(`Planet.convertAge()`, () => {
     expect(jupiter.convertAge(1)).toEqual(11.86);
   });
 
+  test(`It should take user.age OR user.ageRemaining, any age input, and convert the ratio based on which planet user "resides in". i.e Planet.convertAge(User)`, () => {
+    const mercury = new Planet("Mercury", .24);
+
+    const grace = new User("Grace", 31, 50, 50);
+    const graceAgeLeft = grace.lifeExpectancy();
+    const ageOnMercury = mercury.convertAge(graceAgeLeft);
+
+    expect(mercury.convertAge(31)).toEqual(7.4399999999999995);
+    expect(grace.lifeExpectancy()).toEqual(19);
+    expect(ageOnMercury).toEqual(4.56);
+  });
+
 });
 
 

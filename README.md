@@ -40,7 +40,7 @@ This app is essentially an age converter, as we all know that your age is differ
 
 
 ### Known Bugs:
-* None at present time.
+* `line 64 @ objects.test.js: .toEqual should be 7.44 but as Javascript likes to do, it returns a floating point value of 7.4399999999999995`. Until I can figure out how to round the .01 decimal, I will bypass this issue by passing tests manually, and focus on completing my Business/UI Logic.
 
 
 ## _Design Plan_:
@@ -93,9 +93,11 @@ It determines how many years left a user has to live on each planet.
     const lifeAvg = (this.activityLevel * this.diet)/2
     planet.earthYearsRatio * lifeAvg }
 
+After setting individual objects and methods, I will create instances and have their return values work in concert with User input and browser output.
+
 
 ## _License_:
 
 [MIT]()
 
-Copyright (c) 2022 _Marcus Padilla_
+Copyright (c) 2022 _Marcus Lorenzo_
