@@ -1,10 +1,10 @@
-# Title
+# Super Galactic Age Calculator
 #### By _**Marcus Lorenzo**_
 
 
 
 ## _Overview:_
-Summary
+This app is essentially an age converter, as we all know that your age is different on each planet because..."time is relative" you know?
 
 
 ### Technologies Used:
@@ -19,9 +19,12 @@ Summary
 ### Description:
 
 **My primary objectives** outside of the prompt were:
+- Create a thorough, methodical test file(s).
+- No global variables (are object literals global variables? I imagine they are stored as such (const exampleObj = {}), but are classified as "objects" not "global variables".)
 
 **My ultimate objective was** to:
-
+- Write clean, organized code!
+- Separate not just appropriate logic, but to separate components - if necessary.
 
 ---
 
@@ -37,21 +40,59 @@ Summary
 
 
 ### Known Bugs:
-* 
+* None at present time.
 
 
 ## _Design Plan_:
 
-Create website for:
+Create: A calculator that converts earth years (and hence your age) to equivalent years on different planets.
+These planets are:
+[ ] Mercury (.24 Earth years)
+[ ] Venus (.62 Earth years)
+[ ] Mars (1.88 Earth years)
+[ ] Jupiter (11.86 years)
 
-Summary:
+It determines how many years left a user has to live on each planet.
+- const lifeExpectancy. (create an object literal with methods which calculate activityLevel, diet, continent?)
+  [ ] Test 1: with a value of 100
+  [ ] Test 2: referencing lifeExpectancy obj as stated in paranthesis above.
+
+[ ] return remainder of years left to live,
+[ ] if user.age > lifeExpectancy.age return "Congrats, you've managed to prolong the inevitable. Death is Tom and you are Jerry."
+
 
 
 #### Objects, Properties:
+- Planet class
+  constructor(name, earthYearsRatio, userAge){
+  - this.name = name;
+  - this.earthYearsRatio;
+  - convertAge(userAge){
+    this.earthYears * userAge;
+    return this.convertedAge;
+  }
+
+- User class
+  constructor(name, userAge){
+    - this.name = name;
+      //`userAge is always assumed Earth years by default.`
+    - this.userAge = userAge;
+      //`later, assign activityLevel and diet to user input value. For now, assumed 50 = average lifestyle.`
+    - this.activityLevel = 50;
+    - this.diet = 50;
+    
 
 #### Collections/Groupings:
+- none at present moment (`8:55am` will focus on OOJS and tests first.)
 
 #### Behaviours/Specs, Interactivity:
+- Planet
+  - convertAge(userAge);
+- User
+  - lifeExpectancy(planet){
+    //`returns a value in earthYears based on activityLevel and Diet.`
+    const lifeAvg = (this.activityLevel * this.diet)/2
+    planet.earthYearsRatio * lifeAvg }
 
 
 ## _License_:
