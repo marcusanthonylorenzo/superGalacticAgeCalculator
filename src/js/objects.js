@@ -11,16 +11,13 @@ export class Planet {
   }
 }
 
-const mercury = new Planet("Mercury", .24);
-console.log(`you are ${mercury.convertAge(35)} earth years on the planet ${mercury.name}.`);
+export class User {
+  constructor(name, age){
+    this.name = name;
+    this.age = age;
+    //9:10am, assign values from user input later!
+    this.activityLevel = 50;
+    this.diet = 50;
+  }
 
-// export class User {
-//   constructor(name, userAge){
-//     this.name = name;
-//     this.userAge = userAge;
-//     //9:10am, assign values from user input later!
-//     this.activityLevel = 50;
-//     this.diet = 50;
-//   }
-
-// }
+}

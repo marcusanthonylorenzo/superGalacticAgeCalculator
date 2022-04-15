@@ -47,10 +47,10 @@ This app is essentially an age converter, as we all know that your age is differ
 
 Create: A calculator that converts earth years (and hence your age) to equivalent years on different planets.
 These planets are:
-- [ ] Mercury (.24 Earth years)
-- [ ] Venus (.62 Earth years)
-- [ ] Mars (1.88 Earth years)
-- [ ] Jupiter (11.86 years)
+- [x] Mercury (.24 Earth years)
+- [x] Venus (.62 Earth years)
+- [x] Mars (1.88 Earth years)
+- [x] Jupiter (11.86 years)
 
 It determines how many years left a user has to live on each planet.
 - const lifeExpectancy. (create an object literal with methods which calculate activityLevel, diet, continent?)
