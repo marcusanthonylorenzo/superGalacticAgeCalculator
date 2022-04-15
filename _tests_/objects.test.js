@@ -18,10 +18,10 @@ describe(`Planet`, () => {
 
     mercury.convertAge = function (userAge){ 
       console.log(userAge);
-      userAge * this.earthYearsRatio;
+      return userAge * this.earthYearsRatio;
     };
     const mercuryAge = mercury.convertAge(35);
-    console.log(mercuryAge);
+    console.log(`you are ${mercuryAge} earth years on the planet ${mercury.name}.`);
   });
 
 });
