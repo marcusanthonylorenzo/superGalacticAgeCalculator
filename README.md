@@ -4,7 +4,9 @@
 
 
 ## _Overview:_
-This app is essentially an age converter, as we all know that your age is different on each planet because..."time is relative" you know?
+#### This app is essentially an age converter, as we all know that your age is different on each planet because..."time is relative" you know?
+
+##### I was having a ton of issues in test, with creating functions with "yet-to-define" values, particularly, `lines 39-45 @object.js`. These functions designed to be "flexible" in nature, so I do not see the issue. Unfortunately, with this design, I am not able to achieve 100% coverage (before it, in previous commits, I had 100% coverage).
 
 
 ### Technologies Used:
@@ -19,6 +21,7 @@ This app is essentially an age converter, as we all know that your age is differ
 ### Description:
 
 **My primary objectives** outside of the prompt were:
+- DRY code...within my abilities.
 - Create a thorough, methodical test file(s).
 - No global variables (are object literals global variables? I imagine they are stored as such (const exampleObj = {}), but are classified as "objects" not "global variables".)
 
@@ -29,8 +32,8 @@ This app is essentially an age converter, as we all know that your age is differ
 ---
 
 ### Setup/Installation:
-#### `**Please make sure` that once you've received this repo on your computer, to `install your node_modules` and to `run build` via npm or yarn, or any related package manager.
-
+##### `**Please make sure` that in order to run the project correctly: once you've received this repo on your computer, `install the node_modules directory` and to `npm run build` or `yarn run build` (or bundle your `dist directory and bundle.js` via your package manager of choice).
+:warning:
 
 |   via CLI   |  via Download  |
 |---|---|
@@ -43,10 +46,10 @@ This app is essentially an age converter, as we all know that your age is differ
 
 
 ### Known Bugs:
-* `line 64 @ objects.test.js: .toEqual should be 7.44 but as Javascript likes to do, it returns a floating point value of 7.4399999999999995`. Until I can figure out how to round the .01 decimal, I will bypass this issue by passing tests manually, and focus on completing my Business/UI Logic.
+* `multiple lines @object.test.js: although input integers are whole numbers, javascript keeps returning floating point numbers. A common yet annoyingly frustrating issue in test, because I do not want to round, floor, or ceil my return values.`. Until I can figure out how to round the .01 decimal, I will bypass this issue by passing tests manually, and focus on completing my Business/UI Logic.
 
 
-## _Design Plan_:
+## _Design Plan_ (Specs):
 
 Create: A calculator that converts earth years (and hence your age) to equivalent years on different planets.
 These planets are:
@@ -60,8 +63,8 @@ It determines how many years left a user has to live on each planet.
   - [x] Test 1: with a value of 50
   - [ ] ~~Test 2: referencing lifeExpectancy obj as stated in paranthesis above.~~
 
--[x] return remainder of years left to live,
--[x] if user.age > lifeExpectancy.age return "Congrats, you've managed to prolong the inevitable. Death is Tom and you are Jerry."
+- [x] return remainder of years left to live,
+- [x] if user.age > lifeExpectancy.age return "Congrats, you've managed to prolong the inevitable. Death is Tom and you are Jerry."
 
 
 
@@ -87,7 +90,7 @@ It determines how many years left a user has to live on each planet.
 #### Collections/Groupings:
 - none at present moment (`8:55am` will focus on OOJS and tests first.)
 
-#### Behaviours/Specs, Interactivity:
+#### Behaviours/Interactivity:
 - Planet
   - convertAge(userAge);
 - User
@@ -95,7 +98,10 @@ It determines how many years left a user has to live on each planet.
     //`returns a value in earthYears based on activityLevel and Diet.`
     const lifeAvg = (this.activityLevel * this.diet)/2
     planet.earthYearsRatio * lifeAvg }
-- 
+- getAgeOnPlanet()
+  - designed instead of calling each individual method, I can invoke one single function by simply passing their attributes through one singular block, for cleaner code.
+- relativeAges()
+  - this function is the "daddy" of all functions, it brings everything together in the click event. I decided it was important AND DRYer...to be able to simply pass the user and the planet through one line of code in the UI logic.
 
 After setting individual objects and methods, I will create instances and have their return values work in concert with User input and browser output.
 
