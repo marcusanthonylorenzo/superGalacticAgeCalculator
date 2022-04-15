@@ -111,3 +111,20 @@ describe(`User.lifeExpectancy`, () => {
   });  
 
 });
+
+describe(`getAgeOnPlanet`, () => {
+
+  test(`Its should get ANY users age and convert ANY planets relative age simply by passing through the named objects, and using that objects own method.`, () => {
+    const jupiter = new Planet("Jupiter", 11.86);
+    const grace = new User("Grace", 31);
+
+    const getAgeOnPlanet = function(user, planet){
+      let age = user.age;
+      let newAge = planet.convertAge(age);
+      return newAge;
+    };
+    
+    expect(Math.round(getAgeOnPlanet(grace, jupiter))).toEqual(368);
+
+  });
+});
