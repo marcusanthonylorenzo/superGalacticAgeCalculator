@@ -6,7 +6,6 @@ export class Planet {
   }
 
   convertAge(userAge){
-    console.log(userAge);
     return userAge * this.earthYearsRatio;
   }
 }
@@ -15,7 +14,7 @@ export class User {
   constructor(name, age){
     this.name = name;
     this.age = age;
-    //9:10am, assign values from user input later!
+    //9:10am, assign values from user input later, do not need constructor parameters!
     this.activityLevel = 50;
     this.diet = 50;
   }

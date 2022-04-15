@@ -67,4 +67,35 @@ describe(`User`, () => {
     expect(newUser.age).toEqual(34);
   });
 
+  test(`It should create two different users.`, () => {
+    const marcus = new User("Marcus", 34);
+    const grace = new User("Grace", 31);
+
+    expect(marcus.age).toEqual(34);
+    expect(grace.age).toEqual(31);
+  });
+
+});
+
+describe(`User.lifeExpectancy`, () => {
+
+  test(`It should take the average of User.activityLevel and User.diet, subtract the user age to return an int value`, () => {
+    const marcus = new User("Marcus", 34);
+
+    //will gather value from user input in future, will insert int values for testing purposes.
+    marcus.activityLevel = 70;
+    marcus.diet = 40;
+    marcus.lifeExpectancy = function(){
+      const health = (this.activityLevel + this.diet)/2;
+      return health - this.age;
+    };
+
+    const remainingAge = marcus.lifeExpectancy();
+    expect(remainingAge).toEqual(21);
+    console.log(`${marcus.name} is ${marcus.age} years old, and based on an activity/diet evaluation of ${marcus.activityLevel}/${marcus.diet} is expected to live another ${remainingAge} years.`);
+
+    expect(marcus.activityLevel).toEqual(70);
+    expect(marcus.diet).toEqual(40);
+  });  
+
 });
