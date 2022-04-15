@@ -10,8 +10,8 @@ const jupiter = new Planet("Jupiter", 11.86);
 /* Define Users here:
  Note. For both scales: 100 = Perfect, 80 = Good, 60 = OK, 40 = Bad, 20 = Terrible, 0 = you don't eat at all.
 ("name", age, activity level scale 1-100, Diet scale 1-100) */
-const marcus = new User("Marcus", 34, 100, 50);
-const grace = new User("Grace", 31);
+const marcus = new User("Marcus", 100, 100, 50);
+const grace = new User("Grace", 31, 20, 10);
 const heirani = new User("Heirani", 19, 70, 70);
 
 //Output Logic
