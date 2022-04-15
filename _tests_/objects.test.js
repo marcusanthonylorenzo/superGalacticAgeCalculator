@@ -13,6 +13,16 @@ describe(`Planet`, () => {
     console.log(earth, mercury, earth.earthYearsRatio, mercury.earthYearsRatio);
   });
   
+  test(`It should create Planet.convertAge method: method should take int arguement and perform basic multiplication.`, () => {
+    const mercury = new Planet("Mercury", .24);
+
+    mercury.convertAge = function (userAge){ 
+      console.log(userAge);
+      userAge * this.earthYearsRatio;
+    };
+    const mercuryAge = mercury.convertAge(35);
+    console.log(mercuryAge);
+  });
 
 });
 

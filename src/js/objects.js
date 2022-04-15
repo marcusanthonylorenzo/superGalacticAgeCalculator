@@ -4,7 +4,7 @@ export class Planet {
     this.name = name;
     this.earthYearsRatio = earthYearsRatio;
   }
-
+  
 }
 
 // export class User {
