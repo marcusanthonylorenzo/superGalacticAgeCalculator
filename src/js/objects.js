@@ -25,3 +25,9 @@ export class User {
     return health - this.age;
   }
 }
+
+export const getAgeOnPlanet = function(user, planet){
+  let age = user.age;
+  let newAge = planet.convertAge(age);
+  return newAge;
+};
