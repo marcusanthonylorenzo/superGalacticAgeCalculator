@@ -24,7 +24,6 @@ describe(`Planet`, () => {
 describe(`Planet.convertAge()`, () => {
   test(`It should create Planet.convertAge method: method should take int arguement and perform basic multiplication.`, () => {
     const mercury = new Planet("Mercury", .24);
-
     mercury.convertAge = function (userAge){ 
       console.log(userAge);
       return userAge * this.earthYearsRatio;
@@ -51,7 +50,6 @@ describe(`Planet.convertAge()`, () => {
 
   test(`It should take user.age OR user.ageRemaining, any age input, and convert the ratio based on which planet user "resides in". i.e Planet.convertAge(User)`, () => {
     const mercury = new Planet("Mercury", .24);
-
     const grace = new User("Grace", 31, 50, 50);
     const graceAgeLeft = grace.lifeExpectancy();
     const ageOnMercury = mercury.convertAge(graceAgeLeft);
@@ -106,7 +104,6 @@ describe(`getAgeOnPlanet`, () => {
   test(`Its should get ANY users age and convert ANY planets relative age simply by passing through the named objects, and using that objects own method.`, () => {
     const jupiter = new Planet("Jupiter", 11.86);
     const grace = new User("Grace", 31);
-
     const getAgeOnPlanet = function(user, planet){
       let age = user.age;
       let newAge = planet.convertAge(age);

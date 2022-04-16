@@ -8,6 +8,8 @@
 
 ##### I was having a ton of issues in test, with creating functions with "yet-to-define" values, particularly, `lines 39-45 @object.js`. These functions designed to be "flexible" in nature, so I do not see the issue. Unfortunately, with this design, I am not able to achieve 100% coverage (before it, in previous commits, I had 100% coverage).
 
+##### `Update: 4:50pm` I resolved test coverage issues AND maintained functionality by moving two functions from objects.js to index.js. Hopefully, they hold up in grading.
+
 
 ### Technologies Used:
 
