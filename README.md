@@ -34,8 +34,7 @@
 ---
 
 ### Setup/Installation:
-##### `**Please make sure` that in order to run the project correctly: once you've received this repo on your computer, `install the node_modules directory` and to `npm run build` or `yarn run build` (or bundle your `dist directory and bundle.js` via your package manager of choice).
-:warning:
+##### Please make sure that in order to run the project correctly: once you've received this repo on your computer, install the node_modules directory in your CLI with `npm install`, then bundle and start a local server, type: `npm run start`.
 
 |   via CLI   |  via Download  |
 |---|---|
@@ -43,12 +42,16 @@
  Open Git Bash or Terminal and type: `cd ~/desktop` | Go to your zip file and extract to desired location on computer. 
  This will bring you to your desktop location on the command line, to receive files. | Go to specified extraction folder, and open index.html in your broswer. 
  Next, type: `git clone https://github.com/marcusanthonylorenzo/superGalacticAgeCalculator` | 
- Once completed, go to your desktop and find the folder with same name as the repository. | **Note**: downloading not cloning will not allow you to push any changes to the repo. 
- Open index.html in your browser. |
+ Once completed, go to your desktop and open the folder with same name as the repository, via your text editor. | **Note**: downloading not cloning will not allow you to push any changes to the repo. 
+In the CLI, install node_modules directory via `npm install` or `yarn install`, then bundle and start a local server via `npm run start` or `yarn run start` to run project. |
 
+
+#### Running Tests:
+- To view tests via Jest, in your CLI type `npm run test`.
 
 ### Known Bugs:
-* `multiple lines @object.test.js: although input integers are whole numbers, javascript keeps returning floating point numbers. A common yet annoyingly frustrating issue in test, because I do not want to round, floor, or ceil my return values.`. Until I can figure out how to round the .01 decimal, I will bypass this issue by passing tests manually, and focus on completing my Business/UI Logic.
+* `multiple lines @object.test.js`: **Although input integers are whole numbers, javascript keeps returning floating point numbers. A common yet annoyingly frustrating issue in test, because I do not want to round, floor, or ceil my return values.**
+Until I can figure out how to round the .01 decimal, I will bypass this issue by passing tests manually, and focus on completing my Business/UI Logic.
 
 
 ## _Design Plan_ (Specs):
