@@ -4,7 +4,6 @@ import { Planet, User } from "./../src/js/objects.js";
 describe(`Planet`, () => {
   test(`It should create a new Planet object.`, () => {
     const earth = new Planet("Earth", 1);
-    console.log(earth);
 
     expect(earth.name).toEqual("Earth");
     expect(earth.earthYearsRatio).toEqual(1);
@@ -13,7 +12,7 @@ describe(`Planet`, () => {
   test(`It should create two new Planet objects.`, () => {
     const earth = new Planet("Earth", 1);
     const mercury = new Planet("Mercury", .24);
-    console.log(earth, mercury, earth.earthYearsRatio, mercury.earthYearsRatio);
+
     expect(earth.name).toEqual("Earth");
     expect(earth.earthYearsRatio).toEqual(1);
     expect(mercury.name).toEqual("Mercury");
@@ -25,12 +24,8 @@ describe(`Planet.convertAge()`, () => {
   test(`It should create Planet.convertAge method: method should take int arguement and perform basic multiplication.`, () => {
     const mercury = new Planet("Mercury", .24);
     mercury.convertAge = function (userAge){ 
-      console.log(userAge);
       return userAge * this.earthYearsRatio;
     };
-    const mercuryAge = mercury.convertAge(35);
-    console.log(`you are ${mercuryAge} earth years on the planet ${mercury.name}.`);
-
     expect(mercury.convertAge(35)).toEqual(8.4);
   });
 
@@ -93,8 +88,6 @@ describe(`User.lifeExpectancy`, () => {
 
     const remainingAge = marcus.lifeExpectancy();
     expect(remainingAge).toEqual(21);
-    console.log(`${marcus.name} is ${marcus.age} years old, and based on an activity/diet evaluation of ${marcus.activityLevel}/${marcus.diet} is expected to live another ${remainingAge} years.`);
-
     expect(marcus.activityLevel).toEqual(70);
     expect(marcus.diet).toEqual(40);
   });  
@@ -109,7 +102,6 @@ describe(`getAgeOnPlanet`, () => {
       let newAge = planet.convertAge(age);
       return newAge;
     };
-    
     expect(Math.round(getAgeOnPlanet(grace, jupiter))).toEqual(368);
   });
 });
